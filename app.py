@@ -2,7 +2,10 @@ from flask import Flask, render_template, url_for, flash, redirect
 from forms import formulaireRegister, formulaireLogin, formulaireDb
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-appero = Flask(__name__)
+from AwesomeProject import create_app
+
+#appero = Flask(__name__) fait dans le init.py
+appero = create_app()
 
 appero.config['SECRET_KEY'] = 'paella55156tartiflette565'
 
